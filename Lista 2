@@ -1,0 +1,26 @@
+select * from Livros
+where disponivel = true;
+
+select * from Livros
+where editora = "HarperCollins";
+
+select * from Livros
+where ano_publicacao between 2000 and 2010;
+
+select autor, count(autor) from Livros
+group by autor
+having count(autor) > 3;
+
+select * from Livros
+where titulo = '%Senhor%';
+
+select * from Livros
+where categoria in ("Fantasia", "Ficção Científica", "Fábula");
+
+select distinct categoria from Livros;
+
+select * from Livros
+where quantidade_paginas between 200 and 400;
+
+select titulo, ano_publicacao from Livros
+order by ano_publicacao;
